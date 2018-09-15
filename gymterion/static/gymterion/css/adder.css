@@ -1,0 +1,11 @@
+#adder_wrapper{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3%;
+    position: relative;
+    width: 80%;
+    margin: 1em 10% 1em 10%
+}
+input#weight{
+    padding-left: 5px;
+}

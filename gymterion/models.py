@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -9,7 +10,8 @@ class Exercise(models.Model):
         return self.name
 
 class Record(models.Model):
-    creation_date = models.DateTimeField('creation_date')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=0)
+    creation_date = models.DateTimeField('creation_date', auto_now_add=True)
     exercise = models.ForeignKey(Exercise, on_delete=models.CASCADE)
     series = models.IntegerField(default=0)
     reps = models.IntegerField(default=0)

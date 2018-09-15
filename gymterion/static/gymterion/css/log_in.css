@@ -1,0 +1,38 @@
+body {
+    background-color: black !important;
+}
+#log_in_input_wrapper{
+    position: relative;
+    width: 50%;
+    margin-left: 25%;
+    padding-top: 15vh;
+}
+.log_in_input{
+    position: relative;
+    height: 2em;
+    background-color: white;
+    margin: 2vh 0 10px 0;
+    width: 100%;
+}
+#log_in_button{
+    position: relative;
+    width: 50%;
+    height: 2em;
+    background-color: #000000;
+    color: white;
+    border: 1px solid white;
+    margin: 10vh 0 10px 25%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 2em;
+}
+#log_in_wrapper{
+    width: 50%;
+    height: 50vh;
+    position: relative;
+    left: 25%;
+    top: 25vh;
+    background-color: #2956B2;
+    border: 2px solid white;
+}

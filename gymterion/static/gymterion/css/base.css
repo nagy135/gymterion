@@ -1,0 +1,19 @@
+.bit_round{
+    border-radius: 5px;
+}
+.more_round{
+    border-radius: 20px;
+}
+#footer_wrapper{
+    padding: 2em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+}
+#footer_wrapper > div{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: white;
+}

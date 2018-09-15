@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Gymterion !!!!</title>
-    </head>
+{% extends 'gymterion/base.html' %}
+{% block content %}
     <body>
-        <h1>HEADER</h1>
+        {% include 'gymterion/navigation.html' %}
+        {% include 'gymterion/adder.html' %}
+        {% include 'gymterion/footer.html' %}
+
         {% for record in records %}
         <div class="record">{{record.exercise}}</div>
         {% endfor %}
     </body>
-</html>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'gymterion/base.html' %}
+{% block content %}
+    <body>
+        {% include 'gymterion/navigation.html' %}
+
+        <div id="adder_wrapper">
+            <form action="{% url 'add' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="Exercise">Select exercise</label>
+                    <select class="form-control" name="exercise" id="exercise">
+                        {% for exercise in exercises%}
+                        <option value="{{ exercise.id }}">{{ exercise.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight</label>
+                    <input class="form-control" name="weight" id="weight" placeholder="weight">
+                </div>
+                <div class="form-group">
+                    <label for="series">Series</label>
+                    <input class="form-control" name="series" id="series" placeholder="series">
+                </div>
+                <div class="form-group">
+                    <label for="reps">Repetitions</label>
+                    <input class="form-control" name="reps" id="reps" placeholder="repetitions">
+                </div>
+                <div class="form-group">
+                    <label for="note">Note</label>
+                    <textarea class="form-control" name="note" id="note" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg">Add record</button>
+            </form>
+        </div>
+
+        {% include 'gymterion/footer.html' %}
+    </body>
+{% endblock %}
